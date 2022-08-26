@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 
-<body>
+<body class="light-theme">
     <header>
         <audio id="music" autoplay>
 
@@ -29,9 +29,11 @@
     </header>
 
     <main>
-        <section id="section-inverted-word" class="container">
+        <div id="bottom-characters" class="world-characters"></div>
+
+        <section id="section-inverted-world" class="container">
             <div class="section-texts">
-                <h1>O mundo invertido</h1>
+                <h2>O mundo invertido</h2>
                 <p role="text">
                     O mundo invertido parece uma cópia do nosso mundo, mas com criaturas horrendas, tempestades
                     assustadores, muita escuridão e entidades malignas. Um reino controlado por Vecna, que tem planos de
@@ -87,23 +89,24 @@
 
             <div class="form-content">
                 <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo</span> </h3>
-            </div>
-            <div class="form-container">
-                <form>
-                    <label for="txtName">Nome Completo</label>
-                    <input type="text" name="name" id="txtName">
 
-                    <label for="extEmail">E-mail</label>
-                    <input type="email" name="email" id="txtEmail">
+                <div class="form-container">
+                    <form>
+                        <label for="txtName">Nome Completo</label>
+                        <input type="text" name="name" id="txtName">
 
-                    <label for="txtLevel">Level</label>
-                    <input type="text" name="level" id="txtLevel">
+                        <label for="extEmail">E-mail</label>
+                        <input type="email" name="email" id="txtEmail">
 
-                    <label for="txtCharacter">Personagem</label>
-                    <textarea name="character" id="txtCharacter" cols="30" rows="10"></textarea>
+                        <label for="txtLevel">Level</label>
+                        <input type="text" name="level" id="txtLevel">
 
-                    <button type="button" id="btnSuscribe">Me inscrever</button>
-                </form>
+                        <label for="txtCharacter">Personagem</label>
+                        <textarea name="character" id="txtCharacter" cols="30" rows="10"></textarea>
+
+                        <button type="button" id="btnSuscribe">Me inscrever</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -115,6 +118,28 @@
         </p>
         <img src="src/images/footer/logo.svg" alt="Logotipo da DIO._">
     </footer>
+
+    <script>
+        window.addEventListener('click', function(){
+            const audio = document.getElementById('music');
+            audio.play();
+            audio.volume = 0.2
+        })
+
+        function switchTheme(){
+            document.body.classList.toggle('dark-theme')
+            document.body.classList.toggle('light-theme')
+
+            const theme = document.body.classList[0];
+            const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
+
+            const audio = document.getElementById('music');
+            audio.src = `src/musics/${music}`;
+            audio.play();
+            audio.volume = 0.2;
+        }
+    </script>
+
 </body>
 
 </html>
