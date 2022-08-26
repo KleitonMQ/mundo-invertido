@@ -1,7 +1,4 @@
-import app from "./firebase/app.js";
 import {subcribeToClub} from "./firebase/club.js"
-
-console.log(app);
 
 const txtName = document.getElementById('txtName');
 const txtEmail = document.getElementById('txtEmail');
@@ -17,7 +14,8 @@ btnSuscribe.addEventListener('click', () =>{
         level: txtLevel.value, 
         character: txtCharacter.value
     }
-    subcribeToClub(subscription);
+    const subscriptionId = subcribeToClub(subscription);
+    console.log(`inscrito com sucesso. ${subscriptionId}`)
 })
 
 
