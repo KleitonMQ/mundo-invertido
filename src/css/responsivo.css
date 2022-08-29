@@ -1,14 +1,100 @@
-@media(max-width: 750){
+@media(max-width: 750px) {
+
     section {
         display: flex;
         justify-content: space-between;
         margin-bottom: 95px;
-        flex-direction: column;
     }
-    
+
     /* PRIMEIRA SEÇÃO */
     .container {
         max-width: 750px;
         flex-direction: column;
+    }
+
+    #section-inverted-world {
+        align-items: center;
+    }
+
+    #section-inverted-world .section-texts {
+        width: 85%;
+        margin-bottom: 25px;
+    }
+
+    #section-inverted-world .section-texts h2 {
+        max-width: 750px;
+        width: 90%;
+    }
+
+    /* SEGUNDA SECTION */
+
+    #section-stranger-things-trailer .section-texts {
+        width: 85%;
+        text-align: center;
+    }
+    
+    #section-stranger-things-gallery .container h2 {
+        text-align: center;
+        max-width: 500px;
+        display: flex;
+
+    }
+
+    #section-stranger-things-trailer .video-frame {
+        background-color: var(--primary-color);
+    }
+
+    #section-stranger-things-trailer .video-frame iframe {
+        display: flex;
+        margin: auto;
+        bottom: 5px;
+        left: 5px;
+        border: 3px solid;
+        max-width: 500px;
+    }
+
+    /* GALERIA */
+
+    #section-stranger-things-gallery .gallery-container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #section-stranger-things-gallery {
+        width: 100%;
+        justify-content: center;
+        background: var(--background-lamp-image) 100% / 100% no-repeat;
+    }
+
+    /* FORMULARIO */
+
+    #section-form {
+        display: flex;
+        width: 90%;
+    }
+
+    #section-form .form-content h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #section-form .form-content {
+        flex-direction: column;
+    }
+
+    /* FOOTER */
+
+    footer::before,
+    footer::after {
+        content: "";
+        max-width: 200px;
+        max-height: 200px;
+        bottom: -10px;
+        z-index: 0;
+    }
+    footer p{
+        z-index: 1;
     }
 }
