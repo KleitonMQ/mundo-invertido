@@ -14,8 +14,17 @@ btnSuscribe.addEventListener('click', () =>{
         level: txtLevel.value, 
         character: txtCharacter.value
     }
-    const subscriptionId = subcribeToClub(subscription);
-    console.log(`inscrito com sucesso. ${subscriptionId}`)
+    if(txtName.value, txtCharacter.value, txtEmail.value, txtLevel.value != ""){
+        const subscriptionId = subcribeToClub(subscription);
+        alert(`${txtName.value} Inscrito com sucesso.`)
+        txtCharacter.value = ''
+        txtEmail.value = ''
+        txtLevel.value = ''
+        txtName.value = ''
+    }else{
+        alert(`Preencha todos os campos do formulário.`)
+    }
+
 })
 
 

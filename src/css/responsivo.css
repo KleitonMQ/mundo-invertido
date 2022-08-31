@@ -9,7 +9,9 @@
     h1,
     h2,
     h3 {
-        font-size: 40px;
+        font-size: 35px;
+        max-width: 750px;
+        text-align: center;
     }
 
     /* PRIMEIRA SEÇÃO */
@@ -23,7 +25,7 @@
     }
 
     #section-inverted-world .section-texts {
-        width: 85%;
+        width: 90%;
         margin-bottom: 25px;
     }
 
@@ -35,13 +37,13 @@
     /* SEGUNDA SECTION */
 
     #section-stranger-things-trailer .section-texts {
-        width: 85%;
+        width: 90%;
         text-align: center;
     }
 
     #section-stranger-things-gallery .container h2 {
         text-align: center;
-        max-width: 500px;
+        max-width: 340px;
         display: flex;
 
     }
@@ -56,7 +58,7 @@
         bottom: 5px;
         left: 5px;
         border: 3px solid;
-        max-width: 500px;
+        width: 90%;
     }
 
     /* GALERIA */
@@ -72,14 +74,20 @@
         justify-content: center;
         background: var(--background-lamp-image) 100% / 100% no-repeat;
     }
-
+    #section-stranger-things-gallery .container h2 {
+        margin: auto;
+        margin-bottom: 45px;
+    }
     /* FORMULARIO */
 
     #section-form {
         display: flex;
         width: 90%;
     }
-
+    #section-form h2 {
+        width: 100%;
+        text-align: center;
+    }
     #section-form .form-content h3 {
         font-size: 30px;
         text-align: center;
